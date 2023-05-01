@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block style %}
+{% endblock %}
+
+{% block title %}
+Новая запись
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+<h1 align="center">Добавить отзыв</h1>
+<form method="post">
+<input type="text" required name="title" class="form-control" placeholder="Название товара"><br>
+
+<p><select name = 'rate' class="selectpicker form-control">
+<option value="★">★</option>
+<option value="★★">★★</option>
+<option value="★★★">★★★</option>
+<option value="★★★★">★★★★</option>
+<option value="★★★★★">★★★★★</option>
+</select><br>
+
+<textarea name="text" id="text" class="form-control" placeholder="Введите основной текст"></textarea><br>
+<input type="submit" class="btn btn-warning" value="Отправить">
+</form>
+
+
+</div>
+{% endblock %}

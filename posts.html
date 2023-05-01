@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+Страница отзывов
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+  <h1 align="center">Страница отзывов</h1>
+  <hr align="center">
+
+  {% if articles|length > 0 %}
+
+  {% for el in articles %}
+  <div class='alert alert-info'>
+    <h2>{{ el.title }}</h2>
+    <h2>{{ el.rate }}</h2>
+    <p><b>{{ el.text }}</b></p>
+    <p>Дата: {{ el.date.date() }}</p>
+  </div>
+  {% endfor %}
+  {% else %}
+  <p align="center">У нас ещё нет отзывов на сайте</p>
+  {% endif %}
+</div>
+{% endblock %}
